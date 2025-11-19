@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* AppStack Color Palette - Tailwind v4 Configuration */
+/* AppStack Color Palette - Extracted from vendor/appstack/src/scss/1-variables/_app.scss */
 @theme {
   /* AppStack Theme Colors */
   --color-appstack-primary: #3F80EA;
@@ -24,7 +24,7 @@
   --color-appstack-teal: #20c997;
   --color-appstack-cyan: #1F9BCF;
 
-  /* AppStack Gray Scale */
+  /* AppStack Gray Scale - Override Tailwind defaults */
   --color-gray-100: #f4f7f9;
   --color-gray-200: #e2e8ee;
   --color-gray-300: #dee6ed;
@@ -43,6 +43,40 @@
   /* Body Background */
   --color-body-bg: #F7F9FC;
 
-  /* Font Family - Poppins */
-  --font-family-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+  /* Poppins Font Family */
+  --font-family-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/*
+ * Safelist - Force generation of dynamically used classes
+ * These classes are used with ERB interpolation which Tailwind's scanner can't detect
+ */
+@layer utilities {
+  /* Additional Brand Color Backgrounds */
+  .bg-appstack-blue { background-color: var(--color-appstack-blue); }
+  .bg-appstack-indigo { background-color: var(--color-appstack-indigo); }
+  .bg-appstack-purple { background-color: var(--color-appstack-purple); }
+  .bg-appstack-pink { background-color: var(--color-appstack-pink); }
+  .bg-appstack-red { background-color: var(--color-appstack-red); }
+  .bg-appstack-orange { background-color: var(--color-appstack-orange); }
+  .bg-appstack-yellow { background-color: var(--color-appstack-yellow); }
+  .bg-appstack-green { background-color: var(--color-appstack-green); }
+  .bg-appstack-teal { background-color: var(--color-appstack-teal); }
+  .bg-appstack-cyan { background-color: var(--color-appstack-cyan); }
+
+  /* Grayscale Backgrounds (complete the set) */
+  .bg-gray-100 { background-color: var(--color-gray-100); }
+  .bg-gray-200 { background-color: var(--color-gray-200); }
+  .bg-gray-300 { background-color: var(--color-gray-300); }
+  .bg-gray-400 { background-color: var(--color-gray-400); }
+  .bg-gray-500 { background-color: var(--color-gray-500); }
+  .bg-gray-600 { background-color: var(--color-gray-600); }
+  .bg-gray-700 { background-color: var(--color-gray-700); }
+  .bg-gray-800 { background-color: var(--color-gray-800); }
+  .bg-gray-900 { background-color: var(--color-gray-900); }
+
+  /* Sidebar Color Backgrounds */
+  .bg-sidebar-dark { background-color: var(--color-sidebar-dark); }
+  .bg-sidebar-colored { background-color: var(--color-sidebar-colored); }
+  .bg-sidebar-light { background-color: var(--color-sidebar-light); }
 }
