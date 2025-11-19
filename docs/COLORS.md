@@ -35,28 +35,28 @@
 
 | Name | Hex | CSS Variable | Usage |
 |------|-----|--------------|-------|
-| Primary | `#____` | `--bs-primary` | Primary buttons, links, active states |
-| Success | `#____` | `--bs-success` | Success messages, positive actions |
-| Info | `#____` | `--bs-info` | Informational messages |
-| Warning | `#____` | `--bs-warning` | Warning messages, caution states |
-| Danger | `#____` | `--bs-danger` | Error messages, destructive actions |
-| Secondary | `#____` | `--bs-secondary` | Secondary buttons |
-| Light | `#____` | `--bs-light` | Light backgrounds |
-| Dark | `#____` | `--bs-dark` | Dark backgrounds |
+| Primary | `#3F80EA` | `--bs-primary` | Primary buttons, links, active states |
+| Success | `#4BBF73` | `--bs-success` | Success messages, positive actions |
+| Info | `#1F9BCF` | `--bs-info` | Informational messages |
+| Warning | `#E5A54B` | `--bs-warning` | Warning messages, caution states |
+| Danger | `#d9534f` | `--bs-danger` | Error messages, destructive actions |
+| Secondary | `#495057` | `--bs-secondary` | Secondary buttons |
+| Light | `#eff2f5` | `--bs-light` | Light backgrounds |
+| Dark | `#293042` | `--bs-dark` | Dark backgrounds |
 
 ### Gray Scale
 
 | Name | Hex | Usage |
 |------|-----|-------|
-| Gray 100 | `#____` | Backgrounds, subtle surfaces |
-| Gray 200 | `#____` | Borders, dividers |
-| Gray 300 | `#____` | Disabled states |
-| Gray 400 | `#____` | Placeholders |
-| Gray 500 | `#____` | Secondary text |
-| Gray 600 | `#____` | Body text |
-| Gray 700 | `#____` | Headings |
-| Gray 800 | `#____` | Dark surfaces |
-| Gray 900 | `#____` | Darkest text |
+| Gray 100 | `#f4f7f9` | Backgrounds, subtle surfaces |
+| Gray 200 | `#e2e8ee` | Borders, dividers |
+| Gray 300 | `#dee6ed` | Disabled states |
+| Gray 400 | `#ced4da` | Placeholders |
+| Gray 500 | `#adb5bd` | Secondary text |
+| Gray 600 | `#6c757d` | Body text |
+| Gray 700 | `#495057` | Headings |
+| Gray 800 | `#020202` | Dark surfaces |
+| Gray 900 | `#212529` | Darkest text |
 
 ### Sidebar/Navigation Colors
 
@@ -66,10 +66,10 @@ AppStack often uses custom colors for the sidebar. Check:
 
 | Element | Color | Notes |
 |---------|-------|-------|
-| Sidebar Background | `#____` | |
-| Sidebar Text | `#____` | |
-| Sidebar Active | `#____` | |
-| Sidebar Hover | `#____` | |
+| Sidebar Background (Dark) | `#293042` | Default dark sidebar |
+| Sidebar Background (Colored) | `#2A64C1` | Blue sidebar variant |
+| Sidebar Background (Light) | `#ffffff` | Light sidebar variant |
+| Body Background | `#F7F9FC` | Main app background |
 
 ## Tailwind Config
 
@@ -87,24 +87,48 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // AppStack theme colors (update with actual hex values)
+        // AppStack theme colors
         'appstack': {
-          primary: '#____',     // Update from SCSS variables
-          secondary: '#____',
-          success: '#____',
-          info: '#____',
-          warning: '#____',
-          danger: '#____',
-          light: '#____',
-          dark: '#____',
+          primary: '#3F80EA',
+          secondary: '#495057',
+          success: '#4BBF73',
+          info: '#1F9BCF',
+          warning: '#E5A54B',
+          danger: '#d9534f',
+          light: '#eff2f5',
+          dark: '#293042',
+          // Additional brand colors
+          blue: '#3F80EA',
+          indigo: '#6610f2',
+          purple: '#6f42c1',
+          pink: '#e83e8c',
+          red: '#d9534f',
+          orange: '#fd7e14',
+          yellow: '#E5A54B',
+          green: '#4BBF73',
+          teal: '#20c997',
+          cyan: '#1F9BCF',
+        },
+        // AppStack gray scale
+        'gray': {
+          100: '#f4f7f9',
+          200: '#e2e8ee',
+          300: '#dee6ed',
+          400: '#ced4da',
+          500: '#adb5bd',
+          600: '#6c757d',
+          700: '#495057',
+          800: '#020202',
+          900: '#212529',
         },
         // AppStack sidebar colors
         'sidebar': {
-          bg: '#____',
-          text: '#____',
-          active: '#____',
-          hover: '#____',
-        }
+          dark: '#293042',
+          colored: '#2A64C1',
+          light: '#ffffff',
+        },
+        // Background
+        'body-bg': '#F7F9FC',
       },
     },
   },

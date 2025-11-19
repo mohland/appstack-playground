@@ -1,0 +1,158 @@
+<% content_for :page_title, "Color Palette Test" %>
+
+<div class="container mx-auto p-8 max-w-7xl">
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-900 mb-2">AppStack Color Palette</h1>
+    <p class="text-gray-600">Extracted from <code class="text-sm bg-gray-100 px-2 py-1 rounded">vendor/appstack/src/scss/1-variables/_app.scss</code></p>
+  </div>
+
+  <!-- Theme Colors -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Theme Colors</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <% [
+        { name: 'Primary', color: 'primary', hex: '#3F80EA' },
+        { name: 'Secondary', color: 'secondary', hex: '#495057' },
+        { name: 'Success', color: 'success', hex: '#4BBF73' },
+        { name: 'Info', color: 'info', hex: '#1F9BCF' },
+        { name: 'Warning', color: 'warning', hex: '#E5A54B' },
+        { name: 'Danger', color: 'danger', hex: '#d9534f' },
+        { name: 'Light', color: 'light', hex: '#eff2f5' },
+        { name: 'Dark', color: 'dark', hex: '#293042' }
+      ].each do |theme_color| %>
+        <div class="space-y-2">
+          <div class="h-24 rounded-lg border border-gray-200 shadow-sm bg-appstack-<%= theme_color[:color] %>"></div>
+          <div>
+            <p class="font-semibold text-gray-900"><%= theme_color[:name] %></p>
+            <p class="text-sm text-gray-600 font-mono"><%= theme_color[:hex] %></p>
+            <code class="text-xs text-gray-500">bg-appstack-<%= theme_color[:color] %></code>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Additional Brand Colors -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Additional Brand Colors</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+      <% [
+        { name: 'Blue', color: 'blue', hex: '#3F80EA' },
+        { name: 'Indigo', color: 'indigo', hex: '#6610f2' },
+        { name: 'Purple', color: 'purple', hex: '#6f42c1' },
+        { name: 'Pink', color: 'pink', hex: '#e83e8c' },
+        { name: 'Red', color: 'red', hex: '#d9534f' },
+        { name: 'Orange', color: 'orange', hex: '#fd7e14' },
+        { name: 'Yellow', color: 'yellow', hex: '#E5A54B' },
+        { name: 'Green', color: 'green', hex: '#4BBF73' },
+        { name: 'Teal', color: 'teal', hex: '#20c997' },
+        { name: 'Cyan', color: 'cyan', hex: '#1F9BCF' }
+      ].each do |brand_color| %>
+        <div class="space-y-2">
+          <div class="h-20 rounded-lg border border-gray-200 shadow-sm bg-appstack-<%= brand_color[:color] %>"></div>
+          <div>
+            <p class="font-medium text-gray-900 text-sm"><%= brand_color[:name] %></p>
+            <p class="text-xs text-gray-600 font-mono"><%= brand_color[:hex] %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Gray Scale -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Gray Scale</h2>
+    <div class="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
+      <% [
+        { name: 'Gray 100', shade: '100', hex: '#f4f7f9' },
+        { name: 'Gray 200', shade: '200', hex: '#e2e8ee' },
+        { name: 'Gray 300', shade: '300', hex: '#dee6ed' },
+        { name: 'Gray 400', shade: '400', hex: '#ced4da' },
+        { name: 'Gray 500', shade: '500', hex: '#adb5bd' },
+        { name: 'Gray 600', shade: '600', hex: '#6c757d' },
+        { name: 'Gray 700', shade: '700', hex: '#495057' },
+        { name: 'Gray 800', shade: '800', hex: '#020202' },
+        { name: 'Gray 900', shade: '900', hex: '#212529' }
+      ].each do |gray| %>
+        <div class="space-y-2">
+          <div class="h-16 rounded-lg border border-gray-200 shadow-sm bg-gray-<%= gray[:shade] %>"></div>
+          <div>
+            <p class="font-medium text-gray-900 text-xs"><%= gray[:name] %></p>
+            <p class="text-xs text-gray-600 font-mono"><%= gray[:hex] %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Sidebar Colors -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Sidebar/Navigation Colors</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <% [
+        { name: 'Sidebar Dark', color: 'sidebar-dark', hex: '#293042' },
+        { name: 'Sidebar Colored', color: 'sidebar-colored', hex: '#2A64C1' },
+        { name: 'Sidebar Light', color: 'sidebar-light', hex: '#ffffff' },
+        { name: 'Body Background', color: 'body-bg', hex: '#F7F9FC' }
+      ].each do |sidebar_color| %>
+        <div class="space-y-2">
+          <div class="h-24 rounded-lg border border-gray-200 shadow-sm bg-<%= sidebar_color[:color] %>"></div>
+          <div>
+            <p class="font-semibold text-gray-900"><%= sidebar_color[:name] %></p>
+            <p class="text-sm text-gray-600 font-mono"><%= sidebar_color[:hex] %></p>
+            <code class="text-xs text-gray-500">bg-<%= sidebar_color[:color] %></code>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <!-- Button Examples -->
+  <div class="mb-12">
+    <h2 class="text-2xl font-bold text-gray-900 mb-6">Button Examples</h2>
+    <p class="text-gray-600 mb-6">
+      Compare with <code class="text-sm bg-gray-100 px-2 py-1 rounded">vendor/appstack/docs/ui-buttons.html</code>
+    </p>
+
+    <div class="space-y-6">
+      <!-- Solid Buttons -->
+      <div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Solid Buttons</h3>
+        <div class="flex flex-wrap gap-3">
+          <button class="px-4 py-2 bg-appstack-primary text-white rounded hover:opacity-90 transition-opacity">Primary</button>
+          <button class="px-4 py-2 bg-appstack-secondary text-white rounded hover:opacity-90 transition-opacity">Secondary</button>
+          <button class="px-4 py-2 bg-appstack-success text-white rounded hover:opacity-90 transition-opacity">Success</button>
+          <button class="px-4 py-2 bg-appstack-info text-white rounded hover:opacity-90 transition-opacity">Info</button>
+          <button class="px-4 py-2 bg-appstack-warning text-white rounded hover:opacity-90 transition-opacity">Warning</button>
+          <button class="px-4 py-2 bg-appstack-danger text-white rounded hover:opacity-90 transition-opacity">Danger</button>
+          <button class="px-4 py-2 bg-appstack-light text-gray-900 rounded hover:opacity-90 transition-opacity border border-gray-300">Light</button>
+          <button class="px-4 py-2 bg-appstack-dark text-white rounded hover:opacity-90 transition-opacity">Dark</button>
+        </div>
+      </div>
+
+      <!-- Outline Buttons -->
+      <div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Outline Buttons</h3>
+        <div class="flex flex-wrap gap-3">
+          <button class="px-4 py-2 border-2 border-appstack-primary text-appstack-primary rounded hover:bg-appstack-primary hover:text-white transition-colors">Primary</button>
+          <button class="px-4 py-2 border-2 border-appstack-secondary text-appstack-secondary rounded hover:bg-appstack-secondary hover:text-white transition-colors">Secondary</button>
+          <button class="px-4 py-2 border-2 border-appstack-success text-appstack-success rounded hover:bg-appstack-success hover:text-white transition-colors">Success</button>
+          <button class="px-4 py-2 border-2 border-appstack-info text-appstack-info rounded hover:bg-appstack-info hover:text-white transition-colors">Info</button>
+          <button class="px-4 py-2 border-2 border-appstack-warning text-appstack-warning rounded hover:bg-appstack-warning hover:text-white transition-colors">Warning</button>
+          <button class="px-4 py-2 border-2 border-appstack-danger text-appstack-danger rounded hover:bg-appstack-danger hover:text-white transition-colors">Danger</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Verification Instructions -->
+  <div class="mt-12 p-6 bg-gray-100 rounded-lg">
+    <h3 class="font-semibold text-gray-900 mb-3 text-lg">Verification Instructions</h3>
+    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+      <li>Open <code class="text-sm bg-white px-2 py-1 rounded">vendor/appstack/docs/ui-buttons.html</code> in your browser</li>
+      <li>Compare the button colors side-by-side with the ones above</li>
+      <li>Colors should match visually at all screen sizes</li>
+      <li>Test responsive breakpoints: 375px (mobile), 768px (tablet), 1024px (desktop), 1440px (large)</li>
+    </ol>
+  </div>
+</div>
