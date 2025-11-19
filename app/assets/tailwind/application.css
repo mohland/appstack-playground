@@ -1,1 +1,48 @@
 @import "tailwindcss";
+
+/* AppStack Color Palette - Tailwind v4 Configuration */
+@theme {
+  /* AppStack Theme Colors */
+  --color-appstack-primary: #3F80EA;
+  --color-appstack-secondary: #495057;
+  --color-appstack-success: #4BBF73;
+  --color-appstack-info: #1F9BCF;
+  --color-appstack-warning: #E5A54B;
+  --color-appstack-danger: #d9534f;
+  --color-appstack-light: #eff2f5;
+  --color-appstack-dark: #293042;
+
+  /* Additional Brand Colors */
+  --color-appstack-blue: #3F80EA;
+  --color-appstack-indigo: #6610f2;
+  --color-appstack-purple: #6f42c1;
+  --color-appstack-pink: #e83e8c;
+  --color-appstack-red: #d9534f;
+  --color-appstack-orange: #fd7e14;
+  --color-appstack-yellow: #E5A54B;
+  --color-appstack-green: #4BBF73;
+  --color-appstack-teal: #20c997;
+  --color-appstack-cyan: #1F9BCF;
+
+  /* AppStack Gray Scale */
+  --color-gray-100: #f4f7f9;
+  --color-gray-200: #e2e8ee;
+  --color-gray-300: #dee6ed;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #020202;
+  --color-gray-900: #212529;
+
+  /* Sidebar Colors */
+  --color-sidebar-dark: #293042;
+  --color-sidebar-colored: #2A64C1;
+  --color-sidebar-light: #ffffff;
+
+  /* Body Background */
+  --color-body-bg: #F7F9FC;
+
+  /* Font Family - Poppins */
+  --font-family-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+}
